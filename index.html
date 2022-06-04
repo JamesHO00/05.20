@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #3e434b;
+        color: #eeffff;
+      }
+      .header {
+        width: 80%;
+        max-width: 1200px;
+        display: flex;
+        margin: auto;
+        min-height: 100vh;
+        align-items: center;
+      }
+      .header sub {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .header h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      .header p {
+        font-size: 1.25rem;
+        letter-spacing: 3px;
+        line-height: 1.5;
+      }
+      .header a {
+        padding: 20px 40px;
+        font-size: 1.15rem;
+        color: #eeffff;
+        text-decoration: none;
+        border: #b4e9ff solid 1px;
+        display: inline-block;
+        margin-top: 35px;
+      }
+      .header__cover {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2rem;
+
+        animation: scaleChange 1.5s alternate ease-in-out infinite;
+      }
+      .header__cover::before,
+      .header__cover::after {
+        content: '';
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        border: #b4e9ff solid 6px;
+        animation: rotateChange 1.5s ease-in-out infinite;
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+      .header__cover::after {
+        animation-delay: 1s;
+        width: 105%;
+        height: 105%;
+        animation-direction: reverse;
+      }
+      .header__cover img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      @keyframes scaleChange {
+        100% {
+          transform: scale(1.05);
+        }
+      }
+      @keyframes rotateChange {
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <article class="header__container">
+        <sub>Sub Title</sub>
+        <h1>Main Title</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti,
+          ipsam! Maxime iste omnis quaerat fugit aliquid eum commodi sit quod
+          voluptas! Tenetur nostrum culpa dignissimos quo repellat maxime
+          labore? Tempore.
+        </p>
+        <a href="#">Click Me!</a>
+      </article>
+      <aside class="header__cover">
+        <img src="/img/540_540_102400 (6).png" alt="" />
+      </aside>
+    </header>
+  </body>
+</html>
